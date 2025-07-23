@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estudio Creativo - Tienda de Diseño</title>
+  <!-- Google Fonts: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="font-inter bg-white text-gray-900">
+  <!-- Header -->
+  <header class="bg-white shadow sticky top-0 z-50">
+    <div class="container mx-auto flex items-center justify-between py-4 px-6">
+      <div class="text-2xl font-bold tracking-tight">Estudio Creativo</div>
+      <nav>
+        <button id="nav-toggle" class="md:hidden focus:outline-none" aria-label="Abrir menú de navegación">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+        <ul id="nav-menu" class="hidden md:flex space-x-8 text-lg">
+          <li><a href="#inicio" class="hover:text-orange-600 transition">Inicio</a></li>
+          <li><a href="#servicios" class="hover:text-orange-600 transition">Servicios</a></li>
+          <li class="relative group">
+            <button class="flex items-center hover:text-orange-600 transition focus:outline-none" aria-haspopup="true" aria-expanded="false">Catálogo
+              <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <ul class="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded hidden group-hover:block">
+              <li><a href="#cuadros" class="block px-4 py-2 hover:bg-orange-50">Cuadros</a></li>
+              <li><a href="#muebles" class="block px-4 py-2 hover:bg-orange-50">Muebles</a></li>
+              <li><a href="#totebags" class="block px-4 py-2 hover:bg-orange-50">Tote Bags</a></li>
+            </ul>
+          </li>
+          <li><a href="#nosotros" class="hover:text-orange-600 transition">Sobre Nosotros</a></li>
+          <li><a href="#contacto" class="hover:text-orange-600 transition">Contacto</a></li>
+          <li>
+            <button id="cart-btn" class="relative" aria-label="Ver carrito">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 2.7A1 1 0 007 17h10a1 1 0 00.95-.68L19 13M7 13V6a1 1 0 011-1h5a1 1 0 011 1v7"></path></svg>
+              <span id="cart-count" class="absolute -top-2 -right-2 bg-orange-600 text-white text-xs rounded-full px-1">0</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="inicio" class="relative h-[60vh] flex items-center justify-center bg-cover bg-center" style="background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.instagram.com%2Fp%2FC8-s_dHPQcZ%2F&psig=AOvVaw1Hzsr5lSl2saxEzlAKx7Ol&ust=1752716612361000&source=images&cd=vfe&opi=89978449&ved=0CBYQjRxqFwoTCPjFoa2gwI4DFQAAAAAdAAAAABAZ');">
+    <div class="bg-black bg-opacity-50 p-8 rounded-lg text-center">
+      <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Diseño que transforma espacios y emociones</h1>
+      <p class="text-lg text-orange-100 mb-6">Arquitectura, arte y creatividad para tu vida</p>
+      <a href="#servicios" class="inline-block bg-orange-600 text-white px-6 py-3 rounded shadow hover:bg-orange-700 transition">Descubre nuestros servicios</a>
+    </div>
+  </section>
+
+  <!-- Servicios -->
+  <section id="servicios" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-6 text-center">Servicios</h2>
+      <div class="max-w-3xl mx-auto text-center mb-8">
+        <p class="text-lg mb-4">Especialistas en diseño arquitectónico de apartamentos. Creamos espacios funcionales, modernos y llenos de personalidad, adaptados a tus necesidades y estilo de vida.</p>
+        <a href="#contacto" class="inline-block bg-orange-600 text-white px-6 py-2 rounded hover:bg-orange-700 transition">Solicitar Cotización</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Catálogo: Cuadros -->
+  <section id="cuadros" class="py-16">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-6 text-center">Catálogo: Cuadros</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <!-- Cuadro 1 -->
+        <div class="bg-white rounded shadow hover:shadow-lg transition p-4 flex flex-col">
+          <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="Cuadro Óleo" class="rounded mb-4 h-48 object-cover">
+          <h3 class="font-semibold text-lg mb-2">Óleo: Atardecer Urbano</h3>
+          <p class="text-gray-600 mb-2">Óleo sobre lienzo, 60x80cm</p>
+          <button class="mt-auto bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700 transition ver-detalles-btn" data-id="cuadro1">Ver Detalles</button>
+        </div>
+        <!-- Cuadro 2 -->
+        <div class="bg-white rounded shadow hover:shadow-lg transition p-4 flex flex-col">
+          <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=400&q=80" alt="Dibujo" class="rounded mb-4 h-48 object-cover">
+          <h3 class="font-semibold text-lg mb-2">Dibujo: Líneas y Sombras</h3>
+          <p class="text-gray-600 mb-2">Dibujo a lápiz, 40x50cm</p>
+          <button class="mt-auto bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700 transition ver-detalles-btn" data-id="cuadro2">Ver Detalles</button>
+        </div>
+        <!-- Cuadro 3 -->
+        <div class="bg-white rounded shadow hover:shadow-lg transition p-4 flex flex-col">
+          <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=400&q=80" alt="Cuadro Óleo" class="rounded mb-4 h-48 object-cover">
+          <h3 class="font-semibold text-lg mb-2">Óleo: Naturaleza Viva</h3>
+          <p class="text-gray-600 mb-2">Óleo sobre lienzo, 50x70cm</p>
+          <button class="mt-auto bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700 transition ver-detalles-btn" data-id="cuadro3">Ver Detalles</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Catálogo: Muebles Innovadores -->
+  <section id="muebles" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-6 text-center">Catálogo: Muebles Innovadores</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <!-- Mueble 1 -->
+        <div class="bg-white rounded shadow hover:shadow-lg transition p-4 flex flex-col">
+          <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&q=80" alt="Mueble Modular" class="rounded mb-4 h-48 object-cover">
+          <h3 class="font-semibold text-lg mb-2">Mueble Modular</h3>
+          <p class="text-gray-600 mb-2">Diseño adaptable para espacios pequeños.</p>
+          <span class="text-orange-600 font-bold mb-2">$350</span>
+          <button class="mt-auto bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700 transition ver-detalles-btn" data-id="mueble1">Ver Detalles</button>
+        </div>
+        <!-- Mueble 2 -->
+        <div class="bg-white rounded shadow hover:shadow-lg transition p-4 flex flex-col">
+          <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=400&q=80" alt="Silla Escultural" class="rounded mb-4 h-48 object-cover">
+          <h3 class="font-semibold text-lg mb-2">Silla Escultural</h3>
+          <p class="text-gray-600 mb-2">Comodidad y arte en una sola pieza.</p>
+          <span class="text-orange-600 font-bold mb-2">$220</span>
+          <button class="mt-auto bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700 transition ver-detalles-btn" data-id="mueble2">Ver Detalles</button>
+        </div>
+        <!-- Mueble 3 -->
+        <div class="bg-white rounded shadow hover:shadow-lg transition p-4 flex flex-col">
+          <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Mesa Minimalista" class="rounded mb-4 h-48 object-cover">
+          <h3 class="font-semibold text-lg mb-2">Mesa Minimalista</h3>
+          <p class="text-gray-600 mb-2">Perfecta para ambientes modernos.</p>
+          <span class="text-orange-600 font-bold mb-2">$180</span>
+          <button class="mt-auto bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700 transition ver-detalles-btn" data-id="mueble3">Ver Detalles</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Catálogo: Tote Bags -->
+  <section id="totebags" class="py-16">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-6 text-center">Catálogo: Tote Bags</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <!-- Tote Bag 1 -->
+        <div class="bg-white rounded shadow hover:shadow-lg transition p-4 flex flex-col">
+          <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80" alt="Tote Bag Serigrafía" class="rounded mb-4 h-48 object-cover">
+          <h3 class="font-semibold text-lg mb-2">Tote Bag "Arte Urbano"</h3>
+          <p class="text-gray-600 mb-2">Serigrafía artesanal, 100% algodón.</p>
+          <span class="text-orange-600 font-bold mb-2">$25</span>
+          <button class="mt-auto bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700 transition ver-detalles-btn" data-id="totebag1">Ver Detalles</button>
+        </div>
+        <!-- Tote Bag 2 -->
+        <div class="bg-white rounded shadow hover:shadow-lg transition p-4 flex flex-col">
+          <img src="https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=crop&w=400&q=80" alt="Tote Bag Geométrica" class="rounded mb-4 h-48 object-cover">
+          <h3 class="font-semibold text-lg mb-2">Tote Bag "Geometría Viva"</h3>
+          <p class="text-gray-600 mb-2">Diseño geométrico en serigrafía.</p>
+          <span class="text-orange-600 font-bold mb-2">$28</span>
+          <button class="mt-auto bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700 transition ver-detalles-btn" data-id="totebag2">Ver Detalles</button>
+        </div>
+        <!-- Tote Bag 3 -->
+        <div class="bg-white rounded shadow hover:shadow-lg transition p-4 flex flex-col">
+          <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=400&q=80" alt="Tote Bag Minimal" class="rounded mb-4 h-48 object-cover">
+          <h3 class="font-semibold text-lg mb-2">Tote Bag "Minimal"</h3>
+          <p class="text-gray-600 mb-2">Estilo minimalista, serigrafía negra.</p>
+          <span class="text-orange-600 font-bold mb-2">$22</span>
+          <button class="mt-auto bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700 transition ver-detalles-btn" data-id="totebag3">Ver Detalles</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal de Detalles de Producto (oculto por defecto) -->
+  <div id="modal-producto" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden" aria-modal="true" role="dialog">
+    <div class="bg-white rounded-lg shadow-lg max-w-md w-full p-6 relative">
+      <button id="cerrar-modal" class="absolute top-2 right-2 text-gray-500 hover:text-orange-600" aria-label="Cerrar modal">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+      <div id="modal-content">
+        <!-- Contenido dinámico del producto -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Carrito de Compras (modal) -->
+  <div id="modal-carrito" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden" aria-modal="true" role="dialog">
+    <div class="bg-white rounded-lg shadow-lg max-w-lg w-full p-6 relative">
+      <button id="cerrar-carrito" class="absolute top-2 right-2 text-gray-500 hover:text-orange-600" aria-label="Cerrar carrito">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+      <h3 class="text-2xl font-bold mb-4">Carrito de Compras</h3>
+      <div id="carrito-items" class="mb-4">
+        <!-- Productos añadidos al carrito -->
+      </div>
+      <div class="flex justify-between items-center mb-4">
+        <span class="font-bold">Total:</span>
+        <span id="carrito-total" class="text-orange-600 font-bold">$0</span>
+      </div>
+      <button class="w-full bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700 transition">Finalizar Compra</button>
+    </div>
+  </div>
+
+  <!-- Sobre Nosotros -->
+  <section id="nosotros" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-6 max-w-3xl text-center">
+      <h2 class="text-3xl font-bold mb-6">Sobre Nosotros</h2>
+      <p class="text-lg mb-4">En Estudio Creativo fusionamos arquitectura, arte y diseño para crear experiencias únicas. Nuestro equipo está formado por arquitectos, artistas y diseñadores apasionados por transformar espacios y objetos cotidianos en piezas de inspiración. Creemos en la innovación, la calidad y la personalización en cada proyecto.</p>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="py-16">
+    <div class="container mx-auto px-6 max-w-lg">
+      <h2 class="text-3xl font-bold mb-6 text-center">Contacto</h2>
+      <form class="bg-white rounded shadow p-6 space-y-4" autocomplete="off">
+        <div>
+          <label for="nombre" class="block text-sm font-medium mb-1">Nombre</label>
+          <input type="text" id="nombre" name="nombre" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-orange-600" required>
+        </div>
+        <div>
+          <label for="correo" class="block text-sm font-medium mb-1">Correo electrónico</label>
+          <input type="email" id="correo" name="correo" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-orange-600" required>
+        </div>
+        <div>
+          <label for="mensaje" class="block text-sm font-medium mb-1">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="4" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-orange-600" required></textarea>
+        </div>
+        <button type="submit" class="w-full bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700 transition">Enviar Mensaje</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Chatbot flotante (contenedor oculto por defecto) -->
+  <div id="chatbot-float" class="fixed bottom-6 right-6 z-50 hidden flex flex-col items-end">
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden mb-2 border-2 border-orange-600" style="width: 370px; max-width: 90vw;">
+      <div class="flex items-center justify-between px-4 py-2 bg-orange-600 text-white">
+        <span class="text-lg font-bold flex items-center">🤖 Asistente Virtual</span>
+        <button id="cerrar-chatbot" class="text-white hover:text-orange-200 text-2xl font-bold" aria-label="Cerrar chatbot">&times;</button>
+      </div>
+      <iframe src='https://webchat.botframework.com/embed/VDALP-CHATBOT-bot?s=9TX4NEYT7pXoo3mWBlHpokee9vXPXnZYHcSBgyJWYRZITBYg78IbJQQJ99BGACqBBLyAArohAAABAZBS4bxp.ENMmRLyABWRANfj95xLPrrkJj50rv8vnOpl7CJy8xJMzv8744mhMJQQJ99BGACqBBLyAArohAAABAZBSc5VG' style='min-width: 350px; width: 100%; min-height: 420px; border: none; background: #fff;'></iframe>
+    </div>
+  </div>
+
+  <!-- Botón flotante para abrir el chatbot -->
+  <button id="abrir-chatbot" class="fixed bottom-6 right-6 z-50 bg-orange-600 hover:bg-orange-700 text-white rounded-full shadow-lg w-16 h-16 flex items-center justify-center text-3xl focus:outline-none animate-bounce" aria-label="Abrir chatbot">
+    💬
+  </button>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-200 py-8 mt-12">
+    <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+      <div class="mb-4 md:mb-0">&copy; 2024 Estudio Creativo. Todos los derechos reservados.</div>
+      <div class="flex space-x-4">
+        <!-- Iconos de redes sociales (placeholders) -->
+        <a href="#" class="hover:text-orange-600" aria-label="Instagram"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M17.5 6.5v.01"/></svg></a>
+        <a href="#" class="hover:text-orange-600" aria-label="Facebook"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a4 4 0 00-4 4v3H7v4h4v8h4v-8h3l1-4h-4V6a1 1 0 011-1h3z"/></svg></a>
+        <a href="#" class="hover:text-orange-600" aria-label="WhatsApp"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M16.72 15.06a7.5 7.5 0 10-2.66 2.66l2.85.75a1 1 0 001.21-1.21l-.75-2.85z"/><path d="M9.5 9.5a5 5 0 005 5"/></svg></a>
+      </div>
+      <div class="mt-4 md:mt-0">Contacto: info@estudiocreativo.com</div>
+    </div>
+  </footer>
+
+  <!-- Script principal -->
+  <script src="js/main.js"></script>
+</body>
+</html> 
